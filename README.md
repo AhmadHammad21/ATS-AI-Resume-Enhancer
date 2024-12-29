@@ -12,7 +12,7 @@
 
 extract pdft
 
-![Flow](.excalidraw.png)
+![Flow](charts\.excalidraw.png)
 
 pdf -> image -> LIM Model
 OR
@@ -87,6 +87,7 @@ To run this project, ensure you have **Python 3.10** or higher installed on your
 4. **Get an API key**
    get an api from Makersuitr(https://aistudio.google.com/apikey)
    make an .env file and set a key with value
+   GOOGLE_API_KEY
    Install the dependancies list.
    ```bash 
    pip install -r requirements.txt
