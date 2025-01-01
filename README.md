@@ -1,7 +1,9 @@
 # ATS AI Resume Enhancer
 
-![Flow](./charts/.excalidraw.png)
+## Demo
+Try it out at this [link](https://ati-ai-resume-enhancer.streamlit.app/).
 
+[Watch the Demo Video](./video/ATS%20AI%20Resume%20Enhancer.mp4)
 ## Project Overview
 
 This project leverages the [Gemini API](https://gemini.google.com/app) with the `gemini-1.5-flash` model and custom prompts to enhance resumes. Key features include generating insights such as:
@@ -16,13 +18,9 @@ This project leverages the [Gemini API](https://gemini.google.com/app) with the 
 
 These functionalities aim to provide a comprehensive assessment of resumes, offering valuable feedback for both job seekers and recruiters.
 
+![Flow](./charts/.excalidraw.png)
 ---
 
-## Demo
-
-insert video
-
----
 
 ## Project Structure
 
@@ -56,7 +54,7 @@ To run this project, ensure you have **Python 3.10** or higher installed on your
    pip install -r requirements.txt
    ```
 4. **Get an API key**
-   get an api from Makersuitr(https://aistudio.google.com/apikey)
+   get an api from [Makersuite](https://aistudio.google.com/apikey)
    make an .env file and set it as follow
    GOOGLE_API_KEY = "API_KEY"
 

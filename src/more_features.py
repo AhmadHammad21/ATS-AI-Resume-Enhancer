@@ -3,7 +3,7 @@ from src.utils import get_gemini_repsonse, input_pdf_text
 
 
 def more_features_page():
-    st.header("ATS Tracking System")
+    st.header("ATS AI Resume Enhancer")
     input_text = st.text_area("Job Description: ", key="input")
     uploaded_file = st.file_uploader("Upload your resume (PDF)...",type=["pdf"])
 
