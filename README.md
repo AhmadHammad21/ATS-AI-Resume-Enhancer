@@ -12,7 +12,7 @@
 
 extract pdft
 
-![Flow](charts\.excalidraw.png)
+![Flow](\charts\.excalidraw.png)
 
 pdf -> image -> LIM Model
 OR
