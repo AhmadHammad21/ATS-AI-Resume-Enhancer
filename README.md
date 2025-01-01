@@ -3,7 +3,7 @@
 ## Demo
 Try it out at this [link](https://ati-ai-resume-enhancer.streamlit.app/).
 
-[Watch the Demo Video](./video/ATS%20AI%20Resume%20Enhancer.mp4)
+[Watch the Demo Video](./video/ATS%20AI%20Resume%20Enhancer.mov)
 ## Project Overview
 
 This project leverages the [Gemini API](https://gemini.google.com/app) with the `gemini-1.5-flash` model and custom prompts to enhance resumes. Key features include generating insights such as:
