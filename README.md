@@ -1,54 +1,26 @@
-
-
-- api key
-- ui
-    - enter description
-    - upload pdf
-    - convert pdf to image 
-    - options
-    - button
-- prompt templates (multiple)
-
-
-extract pdft
+# ATS AI Resume Enhancer
 
 ![Flow](./charts/.excalidraw.png)
 
-pdf -> image -> LIM Model
-OR
+## Project Overview
 
-pdf -> text -> LLM Model
+This project leverages the [Gemini API](https://gemini.google.com/app) with the `gemini-1.5-flash` model and custom prompts to enhance resumes. Key features include generating insights such as:
 
-# Laptop Prices Analysis and Prediction
+- Resume Overview
+- Keypoints in the Resume (e.g., strengths and weaknesses)
+- Similarity Match Analysis
+- Fit for the Job Role
+- Interview Tips
+- Job Market Insights
+- Skills Gap Analysis
 
-### Project Overview
-
-This project focuses on analyzing and predicting laptop prices using the dataset sourced from [Kaggle Laptop Prices Dataset](https://www.kaggle.com/datasets/owm4096/laptop-prices). The project is aimed at understanding the underlying factors that affect laptop pricing, performing various experiments with machine learning models using MLflow, and deploying a full end-to-end machine learning pipeline.
-
----
-
-## Goals
-
-1. **Exploratory Data Analysis (EDA):**  
-   - Understand the data through visualization and statistical analysis.
-   - Uncover insights into the features that drive laptop prices.
-
-2. **Model Training & Experimentation:**  
-   - Train various machine learning models.
-   - Use **MLflow** to track and compare different experiments.
-   - Choose the best-performing model based on evaluation metrics.
-
-3. **Pipeline Deployment:**  
-   - Develop a robust machine learning pipeline.
-   - Automate data preprocessing, model training, evaluation, and prediction.
-   - Ensure reproducibility of the results.
+These functionalities aim to provide a comprehensive assessment of resumes, offering valuable feedback for both job seekers and recruiters.
 
 ---
 
-## Dataset Information
+## Demo
 
-- **Source:** [Kaggle Laptop Prices Dataset](https://www.kaggle.com/datasets/owm4096/laptop-prices)
-- **Description:** The dataset contains various features related to laptops (brand, RAM, storage, GPU, etc.) along with their prices.
+insert video
 
 ---
 
@@ -56,7 +28,7 @@ This project focuses on analyzing and predicting laptop prices using the dataset
 
 ```bash
 .
-├── src/                  # Source code for pipeline, data processing, and model training
+├── src/                  # Source code for streamlit pages, model inferencing, utils
 ├── app.py                # Streamlit run
 ├── README.md             # Project documentation
 └── requirements.txt      # List of project dependencies
@@ -69,7 +41,7 @@ To run this project, ensure you have **Python 3.10** or higher installed on your
 1. **Clone the Repository:**
    Clone this repository to your local machine.
    ```bash
-   git clone https://github.com/AhmadHammad21/Laptop-Pricing-Prediction-MLflow-Project.git
+   git clone https://github.com/AhmadHammad21/ATS-System.git
    ```
 2. **Create a Virtual Environment:**
    Create and activate virtual environment.
@@ -83,18 +55,13 @@ To run this project, ensure you have **Python 3.10** or higher installed on your
    ```bash 
    pip install -r requirements.txt
    ```
-
 4. **Get an API key**
    get an api from Makersuitr(https://aistudio.google.com/apikey)
-   make an .env file and set a key with value
-   GOOGLE_API_KEY
-   Install the dependancies list.
-   ```bash 
-   pip install -r requirements.txt
-   ```
+   make an .env file and set it as follow
+   GOOGLE_API_KEY = "API_KEY"
 
 ## Next Steps
 
-- **Fine-Tune Models:** Continue fine-tuning the models using hyperparameter tuning techniques (e.g., GridSearchCV).
-- **Deploy Model:** Integrate the best model into a production system, possibly through a web API using Flask or FastAPI.
-- **Monitor Model Performance:** Set up model monitoring and feedback loops to ensure the model remains effective over time.
+- **Enhance the Prompts:** Find better prompts and functionalities.
+- **Play around Different Models** Play around different models and choose a better model
+- **Modify the Resume** Modify the resume itself, this is a challenging step.
