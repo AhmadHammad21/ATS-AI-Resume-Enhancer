@@ -1,7 +1,7 @@
 # ATS AI Resume Enhancer
 
 ## Demo
-Try it out at this [link](https://ati-ai-resume-enhancer.streamlit.app/).
+Try it out at this [link](https://ati-ai-resume-enhancer.streamlit.app/)
 
 https://github.com/user-attachments/assets/e11e0bb0-e632-42d5-b41e-f795f7b2a854
 
