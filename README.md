@@ -40,7 +40,7 @@ To run this project, ensure you have **Python 3.10** or higher installed on your
 1. **Clone the Repository:**
    Clone this repository to your local machine.
    ```bash
-   git clone https://github.com/AhmadHammad21/ATS-System.git
+   git clone https://github.com/AhmadHammad21/ATS-AI-Resume-Enhancer.git
    ```
 2. **Create a Virtual Environment:**
    Create and activate virtual environment.
@@ -57,7 +57,9 @@ To run this project, ensure you have **Python 3.10** or higher installed on your
 4. **Get an API key**
    get an api from [Makersuite](https://aistudio.google.com/apikey)
    make an .env file and set it as follow
+   ```bash
    GOOGLE_API_KEY = "API_KEY"
+   ```
 
 ## Next Steps
 
