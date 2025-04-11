@@ -7,7 +7,7 @@ https://github.com/user-attachments/assets/e11e0bb0-e632-42d5-b41e-f795f7b2a854
 
 ## Project Overview
 
-This project leverages the [Gemini API](https://gemini.google.com/app) with the `gemini-1.5-flash` model and custom prompts to enhance resumes. Key features include generating insights such as:
+This project leverages the [Gemini API](https://gemini.google.com/app) with the `gemini-1.5-flash` model, `gpt-4o-mini` and custom prompts to enhance resumes. Key features include generating insights such as:
 
 - Resume Overview
 - Keypoints in the Resume (e.g., strengths and weaknesses)
