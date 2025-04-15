@@ -1,0 +1,603 @@
+@font-face {
+    font-family: 'CairoBold';
+    src: url('assets/fonts/Cairo-Bold.ttf') format('truetype');
+    font-weight: normal !important;
+    font-style: normal !important;
+  }
+@font-face {
+    font-family: 'CairoReg';
+    src: url('assets/fonts/Cairo-Regular.ttf') format('truetype');
+    font-weight: normal !important;
+    font-style: normal !important;
+  }
+  @font-face {
+    font-family: 'tajBold';
+    src: url('assets/fonts/Tajawal-Bold.ttf') format('truetype');
+    font-weight: normal !important;
+    font-style: normal !important;
+  }
+  @font-face {
+    font-family: 'tajMed';
+    src: url('assets/fonts/Tajawal-Medium.ttf') format('truetype');
+    font-weight: normal !important;
+    font-style: normal !important;
+  }
+  @font-face {
+    font-family: 'tajReg';
+    src: url('assets/fonts/Tajawal-Regular.ttf') format('truetype');
+    font-weight: normal !important;
+    font-style: normal !important;
+  }
+  @font-face {
+    font-family: 'calBold';
+    src: url('assets/fonts/calibri_bold.ttf') format('truetype');
+    font-weight: normal !important;
+    font-style: normal !important;
+  }
+  @font-face {
+    font-family: 'calReg';
+    src: url('assets/fonts/calibri.ttf') format('truetype');
+    font-weight: normal !important;
+    font-style: normal !important;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'calBold';
+}
+body{
+    font-family: 'calBold';
+    background-color: #F0F1F1;
+    color: black;
+}
+[dir=rtl] .menu-vertical .app-brand {
+    padding-right: 1.2rem;
+    padding-left: 1.25rem;
+}
+
+.eng-lang{
+    font-size: 14px;
+    font-family: 'CairoReg';
+    margin: 0;
+}
+.divider{
+    width: 1px;
+    height: 27px;
+    margin: 0px 10px;
+    border: 1px solid #A3A3A3;
+}
+.username{
+    font-size: 14px;
+    font-family: 'calReg';
+    margin: 0;
+    margin-right: 5px;
+}
+h1{
+    font-family: 'calBold';
+    color: black;
+}
+.messages-number{
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    border-radius: 100px;
+    background-color: #E20303;
+    min-width: 16px;
+    height: 16px;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+}
+.form-label {
+  font-family: 'calBold';
+  font-size: 16px;
+  color: black;
+  text-transform: capitalize;
+}
+.messages-number span{
+    font-size: 11px;
+    font-family: 'CairoReg';
+    color: white;
+    text-decoration: none;
+}
+.menu-link > :not(.menu-icon) {
+    flex: 0 1 auto;
+    opacity: 1;
+    font-size: 16px;
+    font-family: 'calBold';
+}
+.account-entry.css {
+    display: block;
+    position: absolute;
+  }
+  .account-entry.css .menu-toggle-icon:before {
+    content: "\ed06";
+  }
+  .layout-menu-collapsed .account-entry.css .menu-toggle-icon:before {
+    content: "\ecbf";
+  }
+
+  .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #000000;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+.dropdown-item:hover{
+    color: #111111;
+}
+.menu:not(.menu-no-animation) .menu-link {
+    transition-duration: 0.3s;
+    transition-property: color, background-color;
+    background-color: rgb(0, 0, 0);
+    border-bottom: 1px solid #B2B2B2 !important;
+    color: black;
+}
+.bg-menu-theme {
+    background-color: #ffffff !important;
+    color: #ffffff;
+}
+[dir=rtl] .dropdown-toggle:not(.dropdown-toggle-split)::after {
+  margin-left: 0;
+  margin-right: 0.75em;
+  display: none;
+}
+.menu-inner {
+    background: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.app-brand {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+    line-height: 1;
+    min-height: 1px;
+    align-items: center;
+    background: white;
+}
+.menu:not(.menu-no-animation) .menu-link {
+    transition-duration: 0.3s;
+    transition-property: color, background-color;
+    background-color: white;
+    border-bottom: 0px !important;
+    color: black;
+}
+.bg-navbar-theme {
+    background-color: #ffffff !important;
+    color: #ffffff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+}
+
+
+
+
+
+
+/* Footer */
+.bg-footer-theme {
+    background-color: #ffffff !important;
+    color: #000000;
+}
+.footer-above{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.footer-above img{
+    transform: translate(5px,25px);
+}
+.footer-red-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    background-color: #980904;
+    padding: 20px;
+    width: clamp(100px, 10vw, 163px);
+    height: 50px;
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+    transform: translate(0px,3px);
+}
+.footer-red-div a{
+    text-decoration: none;
+    margin: 0;
+    font-size: 15px;
+    font-family: 'calBold';
+    color: white;
+}
+.footer-content-container{
+    width: 100%;
+    display: flex;
+    flex: 1 1 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    gap: 40px;
+    margin-top: 20px;
+}
+.footer-container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+.footer-container1 p{
+    font-family: 'calBold';
+    margin: 0;
+    font-size: 14px;
+    color: #565656;
+}
+
+
+/* ServicesPage */
+.content-header-h1{
+    font-family: 'calBold';
+    font-size: clamp(16px, 6vw, 24px);
+    margin: 0;
+}
+.page-link-container {
+    padding-bottom: 20px;
+    border-bottom: 3px solid #018BDA;
+}
+.page-link-container p{
+    font-family: 'calReg';
+    font-size: clamp(12px, 3vw, 16px);
+    margin: 0;
+}
+.input-div2-container{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    width: 100% !important;
+  }
+  .input-div2 {
+    max-width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0px;
+    font-family: Arial, sans-serif;
+  }
+  .input-div2 label {
+    font-size: clamp(12px, 3vw, 15px);
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-wrap: nowrap;
+  }
+  .input-wrapper2 input {
+    width: clamp(200px, 70%, 100%); 
+    flex: 7;
+    height: 35px;
+    padding: 10px 23px 10px 10px; 
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-align: left;
+    font-family: 'calReg';
+  }
+  .input-wrapper2 select {
+    width: clamp(100px, 30%, 100%); 
+    flex: 3;
+    height: 35px !important;
+    padding: 15px; 
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-align: left !important;
+    font-family: 'calReg';
+  }
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    display: none ;
+  }
+  .select2-container--default .select2-selection--single {
+    height: 35px !important;
+    line-height: 35px !important;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0 5px;
+    font-family: 'calReg';
+    text-align: left;
+  }
+  .select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered {
+    padding-right: 8px;
+    padding-left: 10px;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: #5897fb;
+  color: white;
+  text-align: left;
+}
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 35px !important;
+    padding-right: 0; 
+  }
+  .input-wrapper2 {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  
+  .input-wrapper2 img {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: auto;
+    width: 12px;
+    cursor: pointer;
+  }
+   @media (max-width: 470px){
+    .input-wrapper2 img {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: auto;
+      width: 12px;
+      cursor: pointer;
+    }
+   }
+   .input-div2-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .input-div2 {
+    flex: 1; 
+  }
+  
+  .input-div2:nth-child(1) {
+    flex: 7;
+  }
+  
+  .input-div2:nth-child(2) {
+    flex: 3;
+  }
+  .input-wrapper2 input,
+  .input-wrapper2 select {
+    width: 100%;
+  }
+
+  .card{
+    width: 255px !important;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: start;
+    box-shadow: 0px 2px 10px 2px #7171713f;
+  }
+  .card h1{
+    font-size: 16px;
+    margin:10px 0px;
+  }
+  .card p{
+    font-family: 'tajMed';
+    font-size: 16px;
+    color: #545454;
+  }
+.btn-classic1{
+    border-radius: 5px;
+    width: 156px;
+    height: 34px;
+    text-align: center;
+    background-color: #004D79;
+    color: white;
+    border: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+.btn-classic1 h1{
+    font-size: 16px;
+    font-family: 'calBold';
+    margin: 0;
+    color: white;
+}
+.circle-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  .circle-pagination li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle-pagination .page-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    line-height: 36px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle-pagination .page-btn:hover {
+    border-color: #018BDA;
+  }
+
+  .circle-pagination .active {
+    background-color: #018BDA; /* Blue like your image */
+    color: white;
+    border-color: #018BDA;
+  }
+
+  .circle-pagination .arrow-btn {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    color: #555;
+    cursor: pointer;
+    padding: 0 8px;
+  }
+
+  .circle-pagination .arrow-btn:disabled {
+    color: #ccc;
+    cursor: default;
+  }
+
+@media (max-width:399px ){
+    .circle-pagination .page-btn {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        font-weight: bold;
+        text-align: center;
+        line-height: 36px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .pagination-responsive-400{
+        margin-top: 40px;
+        justify-content: center !important;
+      }
+}
+
+
+/* MostAskedQues */
+.question-container {
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+    background-color: #E6F4FC;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.question-container img{
+    width: 8px;
+}
+.question-info h1 {
+    margin: 0;
+    font-family: 'CairoBold';
+    font-size: clamp(14px, 3vw, 20px);
+    color: #018BDA;
+}
+
+.question-info p {
+    margin: 0;
+    font-family: 'calBold';
+    font-size: clamp(12px, 3vw, 16px);
+    color: #000000;
+}
+
+/* Wrapper controls height transition */
+.answer-wrapper {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.4s ease;
+}
+
+/* Inner content stays static */
+.answer {
+    font-family: 'calRegular';
+    font-size: 14px;
+    color: #333;
+    padding-top: 10px;
+}
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Rotated state */
+.arrow-rotated {
+    transform: rotate(-90deg); /* adjust as needed depending on your icon direction */
+}
+
+
+.Access-icon-fixed{
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+.Access-icon-fixed img{
+  width: clamp(60px, 10vw, 82px);
+}
+
+
+@media (max-width:767px){
+  .messages-number{
+    position: relative;
+    top: 0px;
+    right: 0px;
+    border-radius: 100px;
+    background-color: #E20303;
+    min-width: 16px;
+    height: 16px;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+}
+.messages-number span{
+    font-size: 11px;
+    font-family: 'CairoReg';
+    color: white;
+    text-decoration: none;
+}
+}
+
+@media (max-width:350px){
+  .card-ratingSection-responsive{
+    margin-top: 5px !important;
+  }
+}
+.dropdown-toggle::after {
+  margin-top: -0.45em;
+  width: 0.45em;
+  height: 0.45em;
+  border: 1.5px solid;
+  border-top: 0;
+  border-left: 0;
+  transform: rotate(45deg);
+  display: none;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  margin-left: 0px;
+}

@@ -1,0 +1,250 @@
+.main-wrapper {
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .left-panel {
+    width: 350px;
+    background: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-left: 0px;
+  }
+
+  .help-button {
+    background-color: #4D78CA;
+    color: white;
+    padding: 15px 48px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: right;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    text-wrap: nowrap;
+    gap: 23px;
+  }
+  .help-button img{
+    width: clamp(15px, 10vw, 35px);
+  }
+  @media (max-width: 432px){
+    .help-button {
+        background-color: #4D78CA;
+        color: white;
+        padding: 15px 28px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: right;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 5px;
+        text-wrap: nowrap;
+        gap: 23px;
+      }
+  }
+  @media (max-width: 334px){
+    .help-button {
+        background-color: #4D78CA;
+        color: white;
+        padding: 15px 10px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: right;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 5px;
+        text-wrap: nowrap;
+        gap: 23px;
+      }
+  }
+  .media-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .media-container img {
+    width: 100%;
+    display: block;
+  }
+
+  .play-button {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    font-size: 40px;
+    color: red;
+  }
+
+  .time-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: black;
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #C7C7C7;
+  }
+  .time-box h1{
+    font-family: 'tajBold';
+    font-size: clamp(12px, 3vw, 15px);
+    margin: 0;
+  }
+  .time-box span{
+    font-family: 'tajReg';
+    font-size: clamp(13px, 3vw, 16px);
+    margin: 0;
+  }
+  .time-box img{
+    width: clamp(25px, 10vw,65px);
+  }
+  .right-panel {
+    flex-grow: 1;
+    padding: 20px;
+  }
+
+  section {
+    border: 1px solid #C7C7C7;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+
+  h3 {
+    font-family: 'tajBold';
+    color: black;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  section p{
+    font-family: 'tajReg';
+    color: black;
+    font-size: 16px;
+    margin: 0;
+  }
+  ul {
+    list-style: none;
+    padding-right: 5px;
+  }
+
+  ul li {
+    font-family: 'tajReg';
+    color: black;
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 6px;
+  }
+  ul li img{
+    margin-left: 10px;
+  }
+
+  .declaration-box {
+    background: #ffffff;
+    padding: 10px;
+    font-size: 16px;
+    border: 0px;
+  }
+  .declaration-box h1{
+    
+    font-family: 'tajBold';
+    font-size: clamp(12px, 3vw, 15px);
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .declaration-box label{
+    font-family: 'tajReg';
+    color: black;
+    font-size: 16px;
+    margin: 0;
+  }
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  button.start-btn {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  button.back-btn {
+    background: #ccc;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-classic2{
+    border-radius: 5px;
+    width: 139px;
+    height: 34px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid #004D79;
+  }
+  .btn-classic1 {
+    border-radius: 5px;
+    width:139px;
+    height: 34px;
+    text-align: center;
+    background-color: #004D79;
+    color: white;
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+}
+  @media (max-width:700px){
+    .main-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        margin: auto;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+  }
+  @media (max-width:400px){
+
+    .right-panel {
+        flex-grow: 1;
+        padding: 0px;
+        width: 100%;
+      }
+    
+  }
+
+  .alert-trigger {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .alert-trigger:hover {
+    transform: scale(1.1);
+  }
