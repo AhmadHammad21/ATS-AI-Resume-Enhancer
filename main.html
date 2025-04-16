@@ -69,31 +69,31 @@
           <ul class="menu-inner py-1">
             <!-- Page -->
             <li class="menu-item active">
-              <a href="ServicesPage.html" class="menu-link">
+              <a href="main.html  " class="menu-link">
                 <i class="menu-icon tf-icons"><img src="../assets/images/Home-Icon.png" style="margin-bottom: 5px;" alt=""></i>
                 <div data-i18n="Page 1">Homepage</div>
               </a>
             </li>
-            <li class="menu-item ">
-              <a href="Profile.html" class="menu-link">
+            <!-- <li class="menu-item">
+              <a href="main.html" class="menu-link">
                 <i class="menu-icon tf-icons"><img src="../assets/images/Profile-icon.png" style="margin-bottom: 5px;" alt=""></i>
                 <div data-i18n="Page 1">Profile</div>
               </a>
             </li>
             <li class="menu-item ">
-              <a href="Orders.html" class="menu-link">
+              <a href="main.html" class="menu-link">
                 <i class="menu-icon tf-icons"><img src="../assets/images/Orders-icon.png" style="margin-bottom: 5px;" alt=""></i>
                 <div data-i18n="Page 1">My Requests</div>
               </a>
-            </li>
-            <li class="menu-item ">
-              <a href="MostAskedQues.html" class="menu-link">
+            </li> -->
+            <!-- <li class="menu-item ">
+              <a href="main.html" class="menu-link">
                 <i class="menu-icon tf-icons"><img src="../assets/images/questions-icon.png" style="margin-bottom: 5px;" alt=""></i>
                 <div data-i18n="Page 1">FAQ</div>
               </a>
-            </li>
+            </li> -->
             <li class="menu-item ">
-              <a href="ContactUs.html" class="menu-link">
+              <a href="main.html" class="menu-link">
                 <i class="menu-icon tf-icons"><img src="../assets/images/Callus-icon.png" style="margin-bottom: 5px;" alt=""></i>
                 <div data-i18n="Page 1">Contact Us</div>
               </a>
@@ -186,53 +186,53 @@
                 <!-- body -->
                 <div class="main-wrapper">
                     <div class="left-panel">
-                    <button class="help-button"><img src="assets/guide-icon.png" alt="">Resumes</button>
+                    <button class="help-button"><img src="assets/guide-icon.png">Resumes</button>
                 
                     </div>
                      
                       <div class="right-panel">
                     <section>
-                        <h3>Service Description</h3>
-                        <p>This service allows you to print the records of your properties.</p>
+                        <h3><b>Description</b></h3>
+                        <p>This service allows you upload different resumes for many candidates and returns
+                          a ranking table of the matching percentage for each one.
+                        </p>
                     </section>
 
                     <section>
-                    <h3>Job Description</h3>
-                    <!-- NOTE: ADD INPUT JOB DESCRIPTION -->
-                    <p>INPUT</p>
-                    </section>
-
-                    <section>
-                      <h3>Candidates Ranking</h3>
-                      <!-- NOTE: ADD OUTPUT JOB DESCRIPTION -->
-                      <p>OUTPUT TABLE TR TH</p>
+                    <h3><b>Job Description</b></h3>
+                    <textarea style="width: 100%;" id="jobDescriptionInput" rows="8" cols="60" placeholder="Enter job description here..."></textarea>
                     </section>
                         
-                          <div class="col-md-12">
-                            <label class="form-label" for="fileUpload">
-                              <span class="red-span"></span> Required Documents
-                            </label>
-                            <div style="width: 100%; border: 1px solid #ccc; padding: 10px; border-radius: 6px; display: flex; flex-direction: column; align-items: start; justify-content: start;">
-                                <p>Attachments</p>
-                                <div style="width: 100%; border: 1px solid #ccc; padding: 10px; border-radius: 6px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap:5px ;">
-                                    <div class="d-flex justify-content-start align-items-center gap-2">
-                                      <img src="../assets/images/!-icon.png" alt="" class="alert-trigger" data-message="سجل الأموال">
-                                      <p style="font-family: 'tajReg'; font-size: clamp(12px, 3vw, 15px); margin: 0;"> A certified copy of the immovable property register.</p>
-                                    </div>
-                                    <div id="previewContainer" style="max-width: auto;"></div>
-                                    <div id="buttonContainer">
-                                        <button type="button" class="btn-classic1" style="width: 90px;" onclick="triggerUpload()" id="uploadBtn">Upload</button>
-                                        <input type="file" id="fileUpload" accept="image/" style="display: none;" onchange="handleUpload(event)" />
-                                    </div>
-                                </div>
+                    <section>
+                      <div class="col-md-12">
+                        <label class="form-label" for="fileUpload">
+                          <span class="red-span"></span> <b>Required Documents</b>
+                        </label>
+                        <div style="width: 100%; padding: 10px; border-radius: 6px; display: flex; flex-direction: column; align-items: start; justify-content: start;">
+                          <p>Attachments</p>
+                          <div style="width: 100%; border: 1px solid #ccc; padding: 10px; border-radius: 6px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 5px;">
+                            <div class="d-flex justify-content-start align-items-center gap-2">
+                              <img src="../assets/images/!-icon.png" alt="" class="alert-trigger">
+                              <!-- <p style="font-family: 'tajReg'; font-size: clamp(12px, 3vw, 15px); margin: 0;">A certified copy of the immovable property register.</p> -->
                             </div>
+                            <div id="previewContainer" style="max-width: auto;"></div>
+                            <div id="buttonContainer">
+                              <button type="button" class="btn-classic1" style="width: 90px;" onclick="triggerUpload()" id="uploadBtn">Upload</button>
+                              <input type="file" id="fileUpload" accept="application/pdf" multiple style="display: none;" onchange="handleUpload(event)" />
+                            </div>
+                          </div>
                         </div>
-                        
+                      </div>
                     </section>
                      
+                    <section>
+                      <h3><b>Candidates Ranking</b></h3>
+                      <div id="rankingTableContainer"></div>
+                    </section>
                         <div class="action-buttons">
-                          <a href="ServicesPage.html" class="btn-classic2">Back</a>
-                        <a href="ServiceProcedures.html" class="btn-classic1">Start Service</a>
+                          <button onclick="clearTable()" class="btn-classic2">Empty</button>
+                          <button class="btn-classic1" onclick="loadData()">Start Service</button>
+                          <div id="tableContainer"></div>
                     </div>
                     </div>
                     </div>
@@ -285,39 +285,23 @@
   </body>
 
   <script>
-    //Upload Image (Serves)
-    function triggerUpload() {
-            document.getElementById('fileUpload').click();
-        }
+  function triggerUpload() {
+    document.getElementById('fileUpload').click();
+  }
 
-        function handleUpload(event) {
-    const file = event.target.files[0];
-    const previewContainer = document.getElementById('previewContainer');
-    const buttonContainer = document.getElementById('buttonContainer');
+  function handleUpload(event) {
+    const files = event.target.files;
+    const preview = document.getElementById('previewContainer');
+    preview.innerHTML = ''; // Clear old previews
 
-    if (file && file.type.startsWith('image/')) {
-        const imgURL = URL.createObjectURL(file);
-
-        previewContainer.innerHTML = ''; // Clear previous preview
-        const img = document.createElement('img');
-        img.src = imgURL;
-        img.style.maxWidth = '100px';
-        img.style.borderRadius = '6px';
-        img.style.display = 'none'; // Hide initially, will be shown on "عرض"
-
-        previewContainer.appendChild(img);
-
-        // Replace upload button with view and delete buttons
-        buttonContainer.innerHTML = `
-        <div class="d-flex flex-wrap gap-2">
-            <button type="button" class="btn-classic1 me-2" onclick="togglePreview()">View</button>
-            <button type="button" class="btn-delete1" onclick="removeFile()">
-                <img src="../assets/images/Delete2-icon.png" alt="">
-                Delete
-            </button>
-        </div>`;
+    for (const file of files) {
+      if (file.type === "application/pdf") {
+        const para = document.createElement("p");
+        para.textContent = file.name;
+        preview.appendChild(para);
+      }
     }
-}
+  }
 
 function togglePreview() {
     const img = document.querySelector('#previewContainer img');
@@ -347,5 +331,89 @@ function removeFile() {
     `;
 }
 
+async function loadData() {
+  const jobDescription = document.getElementById("jobDescriptionInput").value; // get job description from input
+  const fileInput = document.getElementById("fileUpload"); // input type="file" element
+  const files = fileInput.files;
+
+  if (!jobDescription || files.length === 0) {
+    alert("Please enter a job description and select at least one file.");
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append("job_description", jobDescription);
+  for (let i = 0; i < files.length; i++) {
+    formData.append("list_files", files[i]); // note: list_files matches Flask route
+  }
+  console.log("formData")
+  console.log(formData)
+  try {
+    console.log("sending request")
+
+    const response = await fetch("http://localhost:5000/upload", {
+      method: "POST",
+      body: formData,
+    });
+    console.log("response?");
+    console.log(response);
+    const result = await response.json();
+    console.log("result")
+    console.log(result);
+
+    const data = result.summary_table;
+
+    if (!data || data.length === 0) {
+      document.getElementById("rankingTableContainer").innerText = "No data found.";
+      return;
+    }
+
+    // Build the HTML table
+    const keys = ["Candidate Name", "Match %", "File Name"];
+    let table = "<table><thead><tr>";
+    keys.forEach(key => {
+      table += `<th>${key}</th>`;
+    });
+    table += "</tr></thead><tbody>";
+
+    data.forEach(item => {
+      table += "<tr>";
+      keys.forEach(key => {
+        table += `<td>${item[key]}</td>`;
+      });
+      table += "</tr>";
+    });
+
+    table += "</tbody></table>";
+    document.getElementById("rankingTableContainer").innerHTML = table;
+
+  } catch (error) {
+    console.error("Error uploading data:", error);
+    document.getElementById("rankingTableContainer").innerText = "Failed to load data.";
+  }
+}
+
+function clearTable() {
+  try {
+    // Clear the ranking table
+    const tableContainer = document.getElementById("rankingTableContainer");
+    tableContainer.innerHTML = "<p>The table and files have been cleared.</p>";
+
+    // Clear uploaded files preview
+    const previewContainer = document.getElementById("previewContainer");
+    if (previewContainer) {
+      previewContainer.innerHTML = "";
+    }
+
+    // Reset the file input element
+    const fileInput = document.getElementById("fileUpload");
+    if (fileInput) {
+      fileInput.value = ""; // This clears the selected files
+    }
+
+  } catch (error) {
+    console.error("Error clearing the table and uploads:", error);
+  }
+}
   </script>
 </html>

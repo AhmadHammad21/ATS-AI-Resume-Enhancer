@@ -210,7 +210,7 @@
     border-radius: 5px;
     width:139px;
     height: 34px;
-    text-align: center;
+    text-align: center !important;
     background-color: #004D79;
     color: white;
     border: 0px;
@@ -248,3 +248,18 @@
   .alert-trigger:hover {
     transform: scale(1.1);
   }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 15px;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+  font-family: 'tajReg';
+}
+th {
+  background-color: #f0f0f0;
+}
