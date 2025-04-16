@@ -4,3 +4,4 @@ python-dotenv==1.0.1
 PyPDF2==3.0.1
 openai==1.72.0
 pandas
+flask==3.1.0
