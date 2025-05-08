@@ -31,16 +31,16 @@ This tool helps recruiters quickly identify the best-fit candidates based on job
 #### 🔍 How to Use:
 
 1. **Upload Candidates File**  
-   - Supported formats: `.pdf`.
+Supported formats: `.pdf`.
 
 2. **Enter Job Description**  
-   - Paste a role description or required skill set.
+Paste a role description or required skill set.
 
 3. **Run Matching Algorithm**  
-   - Click on ***Percentage Match*** button and wait for results table.
+Click on Percentage Match button and wait for results table.
 
-4. **Review Detailed Information**  
-   - View detailed information about each candidate strengths and weaknesses.
+4. **Review Detailed Information**
+View detailed information about each candidate strengths and weaknesses.
 
 #### 📌 Notes:
 - No data is stored or sent externally.
