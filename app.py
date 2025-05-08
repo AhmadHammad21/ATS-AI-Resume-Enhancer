@@ -7,11 +7,26 @@ from src.custom_page import custom_prompt
 
 load_dotenv()
 
+
 st.set_page_config(page_title="Candidates Matching System")
+
+st.markdown(
+    """
+    <style>
+        [data-testid="stSidebar"] {
+            width: 20% !important;
+        }
+        [data-testid="stSidebarContent"] {
+            width: 100% !important;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 st.sidebar.markdown("""
 ### 👥 Candidate Matching System
 
-Welcome to the AI-powered candidate matching dashboard. This tool helps recruiters quickly identify the best-fit candidates based on job descriptions and skill alignment.
+This tool helps recruiters quickly identify the best-fit candidates based on job descriptions and skill alignment.
 
 #### 🔍 How to Use:
 
