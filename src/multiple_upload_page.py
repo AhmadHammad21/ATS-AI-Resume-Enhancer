@@ -5,7 +5,7 @@ import re
 
 
 def upload_multiple_page():
-    st.header("ATS AI Resume Enhancer")
+    st.header("Candidates Matching System")
     input_text = st.text_area("Job Description: ", key="input")
     uploaded_files = st.file_uploader("Upload your resume (PDF)...", type=["pdf"], accept_multiple_files=True)
 
@@ -21,7 +21,7 @@ def upload_multiple_page():
 
     submit3 = st.button("Percentage Match")
 
-    show_more = st.button("Show More Information")
+    show_more = st.button("Show Detailed Information")
 
 
     input_prompt1 = """
