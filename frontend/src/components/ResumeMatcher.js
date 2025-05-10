@@ -23,12 +23,15 @@ import { toast } from 'react-toastify';
 import DeleteIcon from '@mui/icons-material/Delete';
 import DescriptionIcon from '@mui/icons-material/Description';
 import { analyzeResumes } from '../api';
+import DetailsModal from './DetailsModal';
 
 const ResumeMatcher = () => {
   const [jobDescription, setJobDescription] = useState('');
   const [files, setFiles] = useState([]);
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState(null);
+  const [selectedDetails, setSelectedDetails] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const onDrop = (acceptedFiles) => {
     const pdfFiles = acceptedFiles.filter(file => file.type === 'application/pdf');
@@ -70,6 +73,16 @@ const ResumeMatcher = () => {
 
   const removeFile = (index) => {
     setFiles(prev => prev.filter((_, i) => i !== index));
+  };
+
+  const handleViewDetails = (details) => {
+    setSelectedDetails(details);
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+    setSelectedDetails(null);
   };
 
   return (
@@ -231,10 +244,7 @@ const ResumeMatcher = () => {
                           <Tooltip title="View Details">
                             <IconButton 
                               size="small"
-                              onClick={() => {
-                                // TODO: Implement detailed view
-                                toast.info('Detailed view coming soon!');
-                              }}
+                              onClick={() => handleViewDetails(result.details)}
                             >
                               <DescriptionIcon />
                             </IconButton>
@@ -249,6 +259,12 @@ const ResumeMatcher = () => {
           </Grid>
         )}
       </Grid>
+
+      <DetailsModal
+        open={modalOpen}
+        onClose={handleCloseModal}
+        details={selectedDetails}
+      />
     </Container>
   );
 };
