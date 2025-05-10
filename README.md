@@ -1,68 +1,118 @@
-# ATS AI Resume Enhancer
+# ATS-AI Resume Enhancer
 
-## Demo
-Try it out at this [link](https://ati-ai-resume-enhancer.streamlit.app/)
+A modern web application that helps recruiters analyze resumes against job descriptions using AI. The application provides a clean interface for uploading multiple resumes and getting detailed analysis of how well each candidate matches the job requirements.
 
-https://github.com/user-attachments/assets/e11e0bb0-e632-42d5-b41e-f795f7b2a854
+## Features
 
-## Project Overview
-
-This project leverages the [Gemini API](https://gemini.google.com/app) with the `gemini-1.5-flash` model, `gpt-4o-mini` and custom prompts to enhance resumes. Key features include generating insights such as:
-
-- Resume Overview
-- Keypoints in the Resume (e.g., strengths and weaknesses)
-- Similarity Match Analysis
-- Fit for the Job Role
-- Interview Tips
-- Job Market Insights
-- Skills Gap Analysis
-
-These functionalities aim to provide a comprehensive assessment of resumes, offering valuable feedback for both job seekers and recruiters.
-
-![Flow](./charts/.excalidraw.png)
----
-
+- Modern, responsive UI built with React
+- Multiple resume upload support
+- AI-powered resume analysis
+- Detailed matching percentage and analysis
+- Clean and intuitive user interface
+- FastAPI backend with automatic API documentation
+- Async processing for better performance
 
 ## Project Structure
 
-```bash
-.
-├── src/                  # Source code for streamlit pages, model inferencing, utils
-├── app.py                # Streamlit run
-├── README.md             # Project documentation
-└── requirements.txt      # List of project dependencies
+```
+ATS-AI-Resume-Enhancer/
+├── frontend/               # React frontend application
+│   ├── public/
+│   └── src/
+├── backend/               # FastAPI backend application
+│   ├── src/
+│   └── uploads/          # Temporary storage for uploaded files
+└── README.md
 ```
 
-## Installation
+## Setup Instructions
 
-To run this project, ensure you have **Python 3.10** or higher installed on your machine. Follow the steps below to set up the environment and install the required dependencies:
+### Backend Setup
 
-1. **Clone the Repository:**
-   Clone this repository to your local machine.
+1. Navigate to the backend directory:
    ```bash
-   git clone https://github.com/AhmadHammad21/ATS-AI-Resume-Enhancer.git
+   cd backend
    ```
-2. **Create a Virtual Environment:**
-   Create and activate virtual environment.
-   ```bash
-   python3 -m venv env
 
-   .\env\Scripts\activate
+2. Create a virtual environment:
+   ```bash
+   python -m venv venv
    ```
-3. **Install the dependancies File:**
-   Install the dependancies list.
-   ```bash 
+
+3. Activate the virtual environment:
+   - Windows:
+     ```bash
+     .\venv\Scripts\activate
+     ```
+   - Unix/MacOS:
+     ```bash
+     source venv/bin/activate
+     ```
+
+4. Install dependencies:
+   ```bash
    pip install -r requirements.txt
    ```
-4. **Get an API key**
-   get an api from [Makersuite](https://aistudio.google.com/apikey)
-   make an .env file and set it as follow
-   ```bash
-   GOOGLE_API_KEY = "API_KEY"
+
+5. Create a `.env` file in the backend directory with your OpenAI API key:
+   ```
+   OPENAI_API_KEY=your_api_key_here
    ```
 
-## Next Steps
+6. Start the backend server:
+   ```bash
+   uvicorn app:app --reload
+   ```
 
-- **Enhance the Prompts:** Find better prompts and functionalities.
-- **Play around Different Models** Play around different models and choose a better model
-- **Modify the Resume** Modify the resume itself, this is a challenging step.
+The API will be available at `http://localhost:8000`
+API documentation will be available at `http://localhost:8000/docs`
+
+### Frontend Setup
+
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+The application will be available at `http://localhost:3000`
+
+## API Documentation
+
+FastAPI automatically generates interactive API documentation. Once the server is running, visit:
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+
+## Usage
+
+1. Enter the job description in the text area
+2. Upload one or more resumes (PDF format)
+3. Click "Analyze Resumes" to start the analysis
+4. View the results showing match percentages and detailed analysis for each resume
+
+## Technologies Used
+
+- Frontend:
+  - React
+  - Material-UI
+  - Axios
+
+- Backend:
+  - FastAPI
+  - OpenAI API
+  - PyPDF2
+  - Pydantic
+  - Uvicorn
+
+## License
+
+MIT
